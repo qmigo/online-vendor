@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ziy7schjrdmhr@opk8u*2d5gi$8ay58wrxh&r0r!#t!casi_+t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 STRIPE_PUB_KEY = 'pk_test_51Kcy5MSD7cO0YfASe1ZCfINFqVTYPZ6P4FWWMNjWZR0zzmLtAqMFncejrIBcY11Ff9OVOFr47GZPkMYiGtUgjlHM00v7HCTpJd'
 STRIPE_SECRET_KEY = 'sk_test_51Kcy5MSD7cO0YfASwrpmjgAnsvG7E1qgFeq1TiSymgQZAh2PZcun8ROLMWsFIq6bD4HvolB8TNoayoz2inBjmUYQ00CM2m82kG'
