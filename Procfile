@@ -1,1 +1,1 @@
-web: gunicorn portal.wsgi:application --log-file -
+web: waitress-serve --port=$PORT interiorshop.wsgi:application
