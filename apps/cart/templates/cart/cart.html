@@ -3,12 +3,13 @@
 {% block title %}Cart | {% endblock %}
 
 {% block content %}
+
     <h1 class="title">Cart</h1>
 
     {% if cart %}
-        <div class="box mb-6">
+        <div class="box mb-6 has-text-primary">
             <div class="table">
-                <table class="table is-fullwidth is-striped">
+                <table class="table is-fullwidth is-striped ">
                     <thead>
                         <th></th>
                         <th>Product</th>
@@ -52,7 +53,7 @@
             </div>
         </div>
 
-        <h2 class="subtitle">Contact information</h2>
+        <h2 class="subtitle has-text-info">Contact information</h2>
 
         <form method="post" action="." id="payment-form">
             {% csrf_token %}    
@@ -76,7 +77,7 @@
             {% endif %}
 
             <div class="columns">
-                <div class="column is-6">
+                <div class="column is-6 has-text-primary">
                     <div class="field">
                         <label>First name</label>
 
@@ -110,7 +111,7 @@
                     </div>
                 </div>
 
-                <div class="column is-6">
+                <div class="column is-6 has-text-primary">
                     <div class="field">
                         <label>Address</label>
 
@@ -137,8 +138,10 @@
                 </div>
             </div>
 
-            <h2 class="subtitle">Payment information</h2>
-
+            <h2 class="subtitle has-text-info">Payment information</h2>
+            <i class="fa-brands fa-cc-mastercard fa-lg"></i>
+            <i class="fa-brands fa-cc-amazon-pay fa-lg"></i>
+            <i class="fa-brands fa-cc-visa fa-lg"></i>
             <div id="card-element">
                 <!-- A Stripe Element will be inserted here -->
             </div>
@@ -150,13 +153,14 @@
             {% endif %}
             
             <div class="field">
-                <div class="control">
-                    <button class="button is-dark mt-4 is-uppercase">Checkout</button>
+                <div class="control has-text-centered">
+                    <button class="button is-success mt-4 is-uppercase is-rounded">Checkout</button>
                 </div>
             </div>
         </div>
     {% else %}
-        <p>You don't have any products in your cart!</p>
+        <p class="is-size-4 has-text-centered has-text-danger">Your Cart is empty :(<br><br>
+        <a href="/"><button class="button is-info is-uppercase is-rounded">Buy Now!</button></a></p>
     {% endif %}
 {% endblock %}
 

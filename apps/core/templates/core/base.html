@@ -6,16 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/8c81cb1f97.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="{% static 'favicon.ico'%}">
     <link rel="stylesheet" href="{% static 'styles/main.css'%}">
     <script src="{% static 'scripts/main.js'%}"></script>
     <title> {% block title %} {% endblock title %}  OpenSouq</title>
 </head>
 <body>
     <!-- navbar starts -->
-    <nav class="navbar is-success ">
+    <nav class="navbar is-info ">
         <div class="navbar-brand">
-            <a href="/" class="navbar-item"><strong>OpenSouq</strong></a>
-    
+            <a href="/" class="navbar-item "><strong>OpenSouq</strong></a>
+    <!--*-->
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
@@ -28,13 +30,14 @@
                 <div class="navbar-item">
                 <form action="{% url 'search'%}" method="get">
                     <div class="field has-addons">
-                        <div class="control">
-                            <input type="text" class="input" name="query" placeholder="Search ..." autocomplete="off">
+                        <div class="control ">
+                            <input type="text" class="input" name="query" placeholder="Search For Products" autocomplete="off">
                         </div>
                         <div class="control">
-                            <button class="button is-dark is-uppercase">Search</button>
+                            <button class="button is-success is-uppercase is-rounded">Search</button>
                         </div>
                     </div>
+                    
                 </form>
                 </div>
             </div>
@@ -46,13 +49,13 @@
                 <a href="{% url 'contact' %} " class="navbar-item">Contact</a>
 
                 <div class="navbar-item">
-                    <a href="{% url 'cart'%}" class="is-dark button">Cart {% if cart %} ({{cart|length}}){% endif %}</a>
+                    <a href="{% url 'cart'%}" class="is-success button is-rounded">Cart {% if cart %} ({{cart|length}}){% endif %}</a>
                 </div>
             </div>
         </div>
     </nav>
     <!-- navbar ends -->
-    <section class="section">
+    <section class="section has-background-primary-light">
         <div class="container">
             {% block content %}
 
@@ -62,12 +65,12 @@
     </section>
 
     <!-- footer starts -->
-    <footer class="footer">
-        <h3 class="is-size-4 mb-4">OpenSouq</h3>    
+    <footer class="footer has-background-success has-text-centered">
+        <h1 class="has-text-centered is-size-2 is-family-primary has-text-white"> OpenSouq</h1>   <br>
         {% if request.user.is_authenticated %}
-        <a href="{% url 'vendor_admin' %}">Vendor Admin</a>
+        <a href="{% url 'vendor_admin' %}"><h1 class="is-family-primary has-text-link is-size-4">Vendor Admin</h1></a>
         {% else %}
-        <a href="{% url 'become_vendor' %}">Become vendor</a>
+        <a href="{% url 'become_vendor' %}"><h1 class="is-family-primary has-text-link is-size-4">BE A VENDOR!</h1></a>
         {% endif %}
     </footer>
     <!-- footer ends -->

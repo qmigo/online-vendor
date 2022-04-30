@@ -1,12 +1,12 @@
 <div class="column is-3 product-list-item">
     <div class="box">
-        <figure class="image is-4by3 mb4">
+        <figure class="image is-4by3 mb4 has-text-primary">
             <a href="{% url 'product' product.category.slug product.slug %}"><img src="{{product.get_thumbnail}}" alt="{{product.title}}" ></a>
         </figure>
         <h2 class="subtitle">{{product.title}}</h2>
-        <h3 class="price is-size-6 mb-5">Rs {{product.price}}</h3>
+        <h3 class="price is-size-6 mb-5 has-text-primary">Rs {{product.price}}</h3>
         <hr>
-        <a href="{% url 'product' product.category.slug product.slug %}" class="button is-dark is-uppercase">View</a>
+        <a href="{% url 'product' product.category.slug product.slug %}" class="button is-success is-uppercase is-rounded">View</a>
     </div>
 </div>
 <script >

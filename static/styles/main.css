@@ -1,7 +1,9 @@
 /**
 * Nav
 */
-
+body{
+    background-color: #f2f7f7;
+}
 .navbar {
     text-transform: uppercase;
 }
@@ -13,11 +15,17 @@
 /**
 * Footer 
 */
-
+.footer{
+    align-self: center;
+}
 .footer a {
     margin-bottom: 15px;
     display: inline-block;
     color: #444;
+}
+.opensouqtext{
+    display: inline-block;
+    margin-left: auto;
 }
 
 /**

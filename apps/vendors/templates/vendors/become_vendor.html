@@ -3,19 +3,19 @@
 {% block title %} Become Vendor | {% endblock %}
 
 {% block content %}
-    <h1>Become Vendor</h1>
+    <h1 class="has-text-centered has-text-success is-size-4">Be a Vendor &amp Join Us!!</h1><br>
     <form action="" method="post">
         {% csrf_token %}
         {{form.as_p}}
         <div class="field">
-            <div class="control">
-                <button class="button is-dark is-uppercase">Sign Up</button>
+            <div class="control"><br>
+                <button class="button is-info is-uppercase is-rounded">Sign Up</button>
             </div>
         </div>
     </form>
 
-    <hr>
+<br>
 
-    <h2 class="sub-title">Already have an account ?</h2>
-    <a href="{% url 'login' %}" class="button is-light is-uppercase">Log IN</a>
+    <h2 class="sub-title is-primary">Already have an account ?</h2><br>
+    <a href="{% url 'login' %}" class="button is-success is-uppercase is-rounded">Log IN</a>
 {% endblock %}

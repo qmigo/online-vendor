@@ -5,13 +5,13 @@
 {% block content %}
     <div class="box">
     <h1 class="title">Vendor Admin {{vendor.name}}</h1>
-    <a href="{% url 'logout' %}" class="card button is-danger is-uppercase">logout</a>
+    <a href="{% url 'logout' %}" class="card button is-danger is-rounded is-uppercase">logout</a>
     </div>
 
     <div class="box">
         <h2 class="is-size-3 mb-4">My Products</h2>
 
-        <a href="{% url 'add_product'%}" class="button is-dark is-uppercase mb-6">Add Product</a>
+        <a href="{% url 'add_product'%}" class="button is-info is-rounded is-uppercase mb-6">Add Product</a>
         {% if products %}
         <table class="table is-fullwidth">
             <thead>
@@ -32,7 +32,7 @@
             </tbody>
         </table>
         {% else %}
-        <p>You don't have any product yet ....</p>
+        <p class="has-text-danger">You don't have any product yet :(</p>
         {% endif %}
     </div>
 {% endblock %}
