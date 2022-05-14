@@ -1,6 +1,6 @@
 <div class="column is-3 product-list-item">
     <div class="box">
-        <figure class="image is-4by3 mb4 has-text-primary">
+        <figure class="image is-4by3 mb4 has-text-primary is-rounded">
             <a href="{% url 'product' product.category.slug product.slug %}"><img src="{{product.get_thumbnail}}" alt="{{product.title}}" ></a>
         </figure>
         <h2 class="subtitle">{{product.title}}</h2>
